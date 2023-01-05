@@ -1,0 +1,72 @@
+/*Selector de etiquetas p*/
+p{
+    font-size: 13pt; /*tamaño de la letra*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*tipo de letra*/
+    font-weight: bold; /*Todo el párrafo está ennegrecido*/
+    font-style: italic; /*El párrafo será curvado*/
+    color: yellow;
+}
+
+/*Selector de clases*/
+.parrafo{
+    background-color: snow;
+    color: peru;
+    text-align: center;
+}
+
+.parrafo2{
+    background-color: snow;
+    color: indigo;
+    text-align: right;
+    font-size: 15pt;
+    font-style: normal;
+}
+
+body{
+    background-image:url(https://img.freepik.com/premium-vector/beautiful-sunset-sky-sea-background_105940-530.jpg?w=2000);
+    
+}
+
+/*Link no visitado*/
+a:link{
+    
+    color: seashell;
+    text-decoration: none;
+}
+/*Link visitado*/
+a:visited{
+    color: palegoldenrod;
+    text-decoration: none;
+}
+/*mouse encima del link*/
+a:hover{
+    color: brown;
+    text-decoration: underline;
+}
+/*link seleccionado*/
+a:active{
+    color: chocolate;
+    text-decoration: underline;
+}
+
+li{
+    font-size: 15pt;
+    display: inline-flex;
+    padding: 20px 30px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    float:right;
+    border: 4px solid saddlebrown;
+}
+
+.parrafo3{
+    color: teal;
+    background-color: snow;
+    text-align: justify;
+    padding: 5px;
+}
