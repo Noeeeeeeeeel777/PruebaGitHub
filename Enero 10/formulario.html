@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Ejemplos con formularios</h2>
+                <form method="post" action="#" name="datos">
+                    <label for="nom">Digite su nombre: </label>
+                    <input type="text" placeholder="nombre de usuario" name="nom" id="nom" required autofocus maxlength="20">
+                    <br>
+                    <label for="correo">Digite su correo: </label>
+                    <input type="email" placeholder="correo de usuario" name="correo" id="correo" required>
+                    <br>
+                    <label for="clave">Digite su contraseña: </label>
+                    <input type="password" placeholder="clave de usuario" name="clave" id="clave" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="Debe contar con al menos 1 número, un dígito mayor o menor y por lo menos 8 caracteres">
+                    <br>
+                    <label for="fecha">Ingrese su fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha" min="1980-01-01" max="2022-12-31" required>
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col">
+                <h2>Formulario con Bootstrap</h2>
+                <form method="post" action="#" name="otros datos">
+                    <div class="form-group">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" placeholder="Ingrese su nombre" class="form-control" id="nombre" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" placeholder="Ingrese su correo" class="form-control" id="correo" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" placeholder="Ingrese su contraseña" class="form-control" id="pass" required autofocus
+                            pattern=".{8,}" title="8 caracteres como mínimo">
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Acerca de ti.</label>
+                        <textarea name="" id="comentarios" class="form-control" rows="5"></textarea>
+                    </div>
+                    <!--insertamos checkbox-->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="1" id="check1">
+                        <label for="check1" class="form-check-label fuente1">La U</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="2" id="check2">
+                        <label for="check2" class="form-check-label fuente2">Colo Colo lo más grande</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" value="3" id="check3">
+                        <label for="check3" class="form-check-label fuente3">Stgo. wanderers</label>
+                    </div>
+                    <br><br>
+                    <!--insertamos radiobuttom-->
+                    <h2>Ustedes creen que Daddy Yankee sea gay?</h2>
+                    <img src="img/Daddy Yankee.jpg" class="foto">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" value="s" id="radio1" name="grupo1">
+                        <label for="radio1" class="form-check-label botonSI">Sí</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" value="n" id="radio1" name="grupo1">
+                        <label for="radio1" class="form-check-label botonNO">No</label>
+                    </div>
+                    <br><br>
+                    <h4>Seleccione la opción de su preferencia</h4>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="7" id="check4">
+                        <label for="check4" class="form-check-label">Completito mmmmmmm</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="8" id="check5">
+                        <label for="check5" class="form-check-label">Maruchan jiji</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="9" id="check6">
+                        <label for="check6" class="form-check-label">Palta...</label>
+                    </div>
+                    <br><br>
+                    <h5>Seleccione una opción de lista</h5>
+                    <div class="form-group">
+                        <label for="lista1">Selecione un color</label>
+                        <select class="form-control" id="lista1">
+                            <option>Amarillo</option>
+                            <option>Rojo</option>
+                            <option>Azul</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <h5>Seleccione una opción de lista</h5>
+                    <div class="form-group">
+                        <label for="lista2">Selecione varios colores</label>
+                        <select multiple class="form-control" id="lista2">
+                            <option>Amarillo</option>
+                            <option>Rojo</option>
+                            <option>Azul</option>
+                        </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

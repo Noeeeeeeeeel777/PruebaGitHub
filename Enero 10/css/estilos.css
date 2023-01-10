@@ -1,0 +1,28 @@
+.fuente1{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.fuente2{
+    font-weight: bold;
+}
+
+.fuente3{
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.botonSI{
+    color: indigo;
+    font-weight: bold;
+}
+
+.botonNo{
+    color: azure;
+    font-weight: bold;
+}
+
+.foto{
+    float: none;
+    width: 500px;
+}
