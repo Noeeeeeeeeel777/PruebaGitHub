@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <title>Ejemplos JQuery</title>
+    <script>
+        $(document).ready(function(){
+            $("#sumar").click(function(){
+                var n1=parseInt($("#num1").val());
+                var n2=parseInt($("#num2").val());
+                var suma=n1+n2;
+                $("#result").val(suma);
+            });
+
+            $("#multiplicar").click(function(){
+                var n1=parseInt($("#num1").val());
+                var n2=parseInt($("#num2").val());
+                var mult=n1*n2;
+                $("#multi").val(mult);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Ejemplos con JQuery</h1>
+    <h2>Ingresar y sumar dos números</h2>
+    <form name="datos" action="#" method="post">
+        <label for="num1">Ingrese un número: </label>
+        <input type="number" id="num1" name="num1">
+        <br><br>
+        <label for="num2">Ingrese otro número: </label>
+        <input type="number" id="num2" name="num2">
+        <br><br>
+        <label for="result">La suma es de: </label>
+        <input type="number" id="result" name="result">
+        <input type="button" id="sumar" value="Sumar dos números">
+        <br><br>
+        <label for="multi">La multiplicación es de: </label>
+        <input type="number" id="multi" name="multi">
+        <input type="button" id="multiplicar" value="Multiplicar dos números">
+    </form>
+</body>
+</html>

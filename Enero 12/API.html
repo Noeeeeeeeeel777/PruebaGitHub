@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Api de comidas</title>
+    <script>
+        $(document).ready(function(){
+            $("#solicitar").click(function(){
+                $.get("https://www.themealdb.com/api/json/v1/1/categories.php",function(data){
+                    $.each(data.categories, function(i, item){
+                        $("#categorias").append("<tr><td>" + item.idCategory + "</td><td>"
+                            + item.strCategory + " </td><td> <img src='"+ item.strCategoryThumb +"'>" + "</td><td>" 
+                                + item.strCategoryDescription + "</td><td>");
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Cargando datos desde una API Rest</h1>
+    <br><br>
+    <div id="caja">
+        <button id="solicitar"> Cargando lista de comidas</button>
+    </div>
+    <br><br>
+    <!--Creamos tablas con class de tipo bootstrap-->
+    <table class="table" id="categorias">
+        <thead>
+            <tr>
+                <th scope="col"> # </th>
+                <th scope="col"> Nombre </th>
+                <th scope="col"> Comida </th>
+                <th scope="col"> Descripción </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
